@@ -1,4 +1,6 @@
 from datetime import datetime
+from datetime import timezone
+from datetime import timedelta
 from django.core.handlers.wsgi import WSGIRequest
 from django.http import HttpResponse
 from django.template import loader
@@ -25,15 +27,18 @@ def post(request: WSGIRequest):
         error_message = '名前を入力してください'
     elif len(text) == 0:
         error_message = '内容を入力してください'
-    elif len(name) > 40:
-        error_message = '名前は40文字以内で入力してください'
+    elif len(name) > 20:
+        error_message = '名前は20文字以内で入力してください'
     elif len(text) > 65535:
         error_message = '内容は65535文字以内で入力してください'
 
     if error_message == '':
         try:
-            post = Post.objects.create(text=text, name=name, post_date=datetime.now())
+            current_time = datetime.now()
+            post = Post.objects.create(text=text, name=name, post_date=current_time)
             post.save()
+            name = ''
+            text = ''
         except:
             error_message = '投稿処理に失敗しました'
 
@@ -47,9 +52,18 @@ def post(request: WSGIRequest):
 
 
 def getPosts():
-    try:
-        last_posts = Post.objects.order_by('-post_date')[:30]
-        posts = last_posts.all()
-        return posts
-    except:
-        return {}
+    posts_object = []
+    # try:
+    last_posts = Post.objects.order_by('-post_date')[:30]
+    posts = last_posts.all()
+    for post in posts:
+        jst = post.post_date.astimezone(timezone(timedelta(hours=+9)))
+        obj = {
+            'name': post.name,
+            'text': post.text,
+            'post_date_str': jst.strftime('%H:%M'),
+        }
+        posts_object.append(obj)
+    return posts_object
+# except:
+#     return {}
