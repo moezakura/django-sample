@@ -1,0 +1,41 @@
+.post-card {
+  width: 95%;
+  border: solid 2px $dark-gray;
+  border-radius: 22px;
+  padding: 10px 20px;
+  margin: 10px auto;
+  box-sizing: border-box;
+
+  .head {
+    $height: 30px;
+    display: flex;
+    height: $height;
+    margin: 0 -20px;
+    padding: 0 20px 8px 20px;
+    box-sizing: border-box;
+    border-bottom: solid thin $dark-gray;
+
+    .name, .date {
+      display: flex;
+      align-items: center;
+      letter-spacing: 1.5px;
+    }
+
+    .name {
+      margin: 0 auto 0 0;
+      font-weight: bold;
+    }
+
+    .date {
+      font-size: 12px;
+      align-items: flex-end;
+      //noinspection CssInvalidPropertyValue
+      color: darken(white, 15%);
+    }
+  }
+
+  .text {
+    font-size: 12px;
+    white-space: pre-wrap;
+  }
+}

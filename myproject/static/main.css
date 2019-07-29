@@ -1,7 +1,7 @@
 @charset "UTF-8";
 html, body {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   margin: 0;
   padding: 0;
   background-color: #212121;
@@ -58,5 +58,34 @@ html, body {
     height: 85px;
     padding-top: 7px;
     padding-bottom: 7px; }
+
+.post-card {
+  width: 95%;
+  border: solid 2px #546e7a;
+  border-radius: 22px;
+  padding: 10px 20px;
+  margin: 10px auto;
+  box-sizing: border-box; }
+  .post-card .head {
+    display: flex;
+    height: 30px;
+    margin: 0 -20px;
+    padding: 0 20px 8px 20px;
+    box-sizing: border-box;
+    border-bottom: solid thin #546e7a; }
+    .post-card .head .name, .post-card .head .date {
+      display: flex;
+      align-items: center;
+      letter-spacing: 1.5px; }
+    .post-card .head .name {
+      margin: 0 auto 0 0;
+      font-weight: bold; }
+    .post-card .head .date {
+      font-size: 12px;
+      align-items: flex-end;
+      color: #d9d9d9; }
+  .post-card .text {
+    font-size: 12px;
+    white-space: pre-wrap; }
 
 /*# sourceMappingURL=main.css.map */
