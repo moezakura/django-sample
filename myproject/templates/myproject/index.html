@@ -20,10 +20,10 @@
 
         {% csrf_token %}
         <label class="basic-input-container">
-            <input type="text" placeholder="NAME" name="name">
+            <input type="text" placeholder="NAME" name="name" value="{{ name }}">
         </label>
         <label class="basic-input-container">
-            <textarea placeholder="TEXT" name="text"></textarea>
+            <textarea placeholder="TEXT" name="text">{{ text }}</textarea>
         </label>
         <label class="basic-input-container">
             <input type="submit" value="SEND">
