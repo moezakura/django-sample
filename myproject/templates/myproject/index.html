@@ -11,12 +11,19 @@
 <h1 class="top-title">&gt;&nbsp;板&nbsp;&lt;</h1>
 
 <div>
-    <form class="basic-form">
+    <form class="basic-form" method="post" action="{% url 'post' %}">
+        {% if error_message %}
+            <div class="error-message">
+                {{ error_message }}
+            </div>
+        {% endif %}
+
+        {% csrf_token %}
         <label class="basic-input-container">
-            <input type="text" placeholder="NAME">
+            <input type="text" placeholder="NAME" name="name">
         </label>
         <label class="basic-input-container">
-            <textarea placeholder="TEXT"></textarea>
+            <textarea placeholder="TEXT" name="text"></textarea>
         </label>
         <label class="basic-input-container">
             <input type="submit" value="SEND">

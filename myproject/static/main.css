@@ -29,6 +29,19 @@ html, body {
     margin: 0 auto;
     min-height: 100%;
     box-shadow: 0 0 8px rgba(255, 255, 255, 0.3); } }
+.basic-form .error-message {
+  display: flex;
+  text-align: center;
+  height: 45px;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  box-sizing: border-box;
+  border-radius: 22.5px;
+  padding: 0 22.5px;
+  border: solid 2px #e53935;
+  margin: 8px auto;
+  font-weight: 900; }
 .basic-form .basic-input-container {
   display: block;
   width: 95%;

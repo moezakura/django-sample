@@ -1,4 +1,20 @@
 .basic-form {
+  .error-message {
+    $height: 45px;
+    display: flex;
+    text-align: center;
+    height: $height;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    box-sizing: border-box;
+    border-radius: $height/2;
+    padding: 0 $height/2;
+    border: solid 2px $red;
+    margin: 8px auto;
+    font-weight: 900;
+  }
+
   .basic-input-container {
     display: block;
     width: 95%;
@@ -32,7 +48,7 @@
       align-items: center;
     }
 
-    textarea{
+    textarea {
       height: 85px;
       padding-top: 7px;
       padding-bottom: 7px;
