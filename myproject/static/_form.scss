@@ -1,0 +1,41 @@
+.basic-form {
+  .basic-input-container {
+    display: block;
+    width: 95%;
+    margin: 15px auto;
+
+    input, textarea {
+      $height: 45px;
+      display: flex;
+      margin: 0;
+      width: 100%;
+      box-sizing: border-box;
+      background-color: transparent;
+      color: white;
+      border: solid 2px $dark-gray;
+      border-radius: $height/2;
+      height: $height;
+      padding: 0 $height/2;
+      letter-spacing: 1.5px;
+      transition: background-color ease .3s, border-color ease .3s;
+      font-size: 16px;
+
+      &:focus {
+        border-color: $light-gray;
+        background-color: rgba(white, .1);
+      }
+    }
+
+    input {
+      -webkit-appearance: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    textarea{
+      height: 85px;
+      padding-top: 7px;
+      padding-bottom: 7px;
+    }
+  }
+}

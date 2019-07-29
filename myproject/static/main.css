@@ -1,6 +1,62 @@
+@charset "UTF-8";
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #212121;
+  color: white; }
+
+* {
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif; }
+
 .top-title {
+  display: flex;
   text-align: center;
-  font-size: 16px;
-  font-weight: 900; }
+  font-size: 20px;
+  font-weight: 900;
+  margin: 0;
+  padding: 0;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid 2px #546e7a;
+  color: #b0bec5; }
+
+@media screen and (min-width: 600px) {
+  body {
+    width: 600px;
+    margin: 0 auto;
+    min-height: 100%;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.3); } }
+.basic-form .basic-input-container {
+  display: block;
+  width: 95%;
+  margin: 15px auto; }
+  .basic-form .basic-input-container input, .basic-form .basic-input-container textarea {
+    display: flex;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: white;
+    border: solid 2px #546e7a;
+    border-radius: 22.5px;
+    height: 45px;
+    padding: 0 22.5px;
+    letter-spacing: 1.5px;
+    transition: background-color ease .3s, border-color ease .3s;
+    font-size: 16px; }
+    .basic-form .basic-input-container input:focus, .basic-form .basic-input-container textarea:focus {
+      border-color: #b0bec5;
+      background-color: rgba(255, 255, 255, 0.1); }
+  .basic-form .basic-input-container input {
+    -webkit-appearance: none;
+    justify-content: center;
+    align-items: center; }
+  .basic-form .basic-input-container textarea {
+    height: 85px;
+    padding-top: 7px;
+    padding-bottom: 7px; }
 
 /*# sourceMappingURL=main.css.map */

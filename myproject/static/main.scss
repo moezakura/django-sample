@@ -1,5 +1,48 @@
-.top-title {
-  text-align: center;
-  font-size: 16px;
-  font-weight: 900;
+@charset "UTF-8";
+
+$light-gray: rgb(176, 190, 197);
+$dark-gray: rgb(84, 110, 122);
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(33, 33, 33);
+  color: white;
 }
+
+* {
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+.top-title {
+  display: flex;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 900;
+  margin: 0;
+  padding: 0;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid 2px $dark-gray;
+  color: $light-gray;
+}
+
+// PC
+@media screen and (min-width: 600px) {
+  body {
+    width: 600px;
+    margin: 0 auto;
+    min-height: 100%;
+    box-shadow: 0 0 8px rgba(white, .3);
+  }
+}
+
+// Mobile
+@media screen and (max-width: 479px) {
+  @import "mobile";
+}
+
+@import "form";

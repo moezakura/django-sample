@@ -68,3 +68,11 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 .idea/
+### https://raw.github.com/github/gitignore/4a8e0a151becd5ccbb83e4aca6e6c195f3d506fd/Sass.gitignore
+
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
+

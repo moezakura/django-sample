@@ -1,0 +1,7 @@
+.basic-form .basic-input-container {
+  display: block; }
+  .basic-form .basic-input-container input, .basic-form .basic-input-container textarea {
+    width: 100%;
+    display: flex; }
+
+/*# sourceMappingURL=_form.css.mapp */
